@@ -1,0 +1,146 @@
+
+#rehabModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Výjazdové miesta / Kúpeľná starostlivosť
+      .modal-body
+
+        %ul.nav.nav-pills.depart-rehab
+          %li.departures.active
+            %a{"data-toggle" => "pill", :href => "#departures"} Výjazdové miesta
+          %li.rehab
+            %a{"data-toggle" => "pill", :href => "#rehab"} Rehabilitacie
+
+        %hr.blue
+
+        .tab-content
+          #departures.tab-pane.fade.in.active
+            %table.table.departure-table
+              %thead
+                %tr
+                  %th.city Mesto
+                  %th
+                  %th Ďeň
+
+              %tbody
+                %tr
+                  %td.city Ružomberok
+                  %td 4x týždenne
+                  %td Pon, Uto, Str, Štv
+                %tr
+                  %td.city Liptovský Mikuláš
+                  %td 1x za dva týždne
+                  %td
+                %tr
+                  %td.city Brezno
+                  %td 1x za dva týždne
+                  %td
+                %tr
+                  %td.city Žiar nad Hronom
+                  %td 1x týždenne
+                  %td Utorok
+                %tr
+                  %td.city Zvolen
+                  %td Podľa tel.dohovoru
+                  %td Utorok
+                %tr
+                  %td.city Lučenec
+                  %td 1x za dva týždne
+                  %td Utorok
+                %tr
+                  %td.city Bojnice-Prievidza
+                  %td 1x za dva týždne
+                  %td Utorok
+                %tr
+                  %td.city Žiar nad Hronom
+                  %td 1x mesačne
+                  %td Začiatok mesiaca
+                %tr
+                  %td.city Žiar nad Hronom
+                  %td 1x týždenne
+                  %td Piatok
+
+            .departure-info
+              %center
+                .icon
+                  %span.glyphicon.glyphicon-info-sign
+                .text
+                  Pre upresnenie prosím kontaktovať  tel. č. :  0905948981
+
+
+          #rehab.tab-pane.fade
+
+            .tabbable.tabs-left
+              %ul.nav.nav-tabs.nav-global
+                %li.active
+                  %a{"data-toggle" => "tab", :href => "#a"} Bardejov
+                %li
+                  %a{"data-toggle" => "tab", :href => "#b"} Bojnice
+                %li
+                  %a{"data-toggle" => "tab", :href => "#c"} Číž
+                %li
+                  %a{"data-toggle" => "tab", :href => "#d"} Dudince
+                %li
+                  %a{"data-toggle" => "tab", :href => "#e"} Kováčová
+                %li
+                  %a{"data-toggle" => "tab", :href => "#f"} Lúčky
+                %li
+                  %a{"data-toggle" => "tab", :href => "#g"} Rajecké Teplice
+                %li
+                  %a{"data-toggle" => "tab", :href => "#h"} Sklené Teplice
+                %li
+                  %a{"data-toggle" => "tab", :href => "#i"} Piešťany
+                %li
+                  %a{"data-toggle" => "tab", :href => "#j"} Smrdáky
+                %li
+                  %a{"data-toggle" => "tab", :href => "#k"} Trenčianske Teplice
+                %li
+                  %a{"data-toggle" => "tab", :href => "#l"} Nimnica
+                %li
+                  %a{"data-toggle" => "tab", :href => "#m"} Sliač
+
+              .tab-content
+                #a.tab-pane.fade.city.in.active
+                  = haml :"modals/rehabs/bardejov"
+
+                #b.tab-pane.city.fade
+                  = haml :"modals/rehabs/bojnice"
+
+                #c.tab-pane.city.fade
+                  = haml :"modals/rehabs/ciz"
+
+                #d.tab-pane.city.fade
+                  = haml :"modals/rehabs/dudince"
+
+                #e.tab-pane.city.fade
+                  = haml :"modals/rehabs/kovacova"
+
+                #f.tab-pane.city.fade
+                  = haml :"modals/rehabs/lucky"
+
+                #g.tab-pane.city.fade
+                  = haml :"modals/rehabs/rajecke"
+
+                #h.tab-pane.city.fade
+                  = haml :"modals/rehabs/sklene"
+
+                #i.tab-pane.city.fade
+                  = haml :"modals/rehabs/piestany"
+
+                #j.tab-pane.city.fade
+                  = haml :"modals/rehabs/smrdaky"
+
+                #k.tab-pane.city.fade
+                  = haml :"modals/rehabs/trencianske"
+
+                #l.tab-pane.city.fade
+                  = haml :"modals/rehabs/nimnica"
+
+                #m.tab-pane.city.fade
+                  = haml :"modals/rehabs/sliac"
+
+
+          .modal-footer
+            %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

@@ -1,0 +1,53 @@
+#userInfoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Informácie pre klientov
+      .modal-body
+
+
+
+        %ul.nav.nav-pills.client-info
+          %li.first.active
+            %a{"data-toggle" => "pill", :href => "#insurance"} Sídla a novinky zdravotných poisťovní
+          %li.second
+            %a{"data-toggle" => "pill", :href => "#drugs"} Produkty pre liečenie ortopedických onemocnení
+
+        %hr.blue
+
+        .tab-content
+
+          #insurance.tab-pane.fade.in.active
+            %ul.nav.nav-pills.insurance
+              %li.vzp.active
+                %a{"data-toggle" => "pill", :href => "#vzp"}
+                  %img{:src => "/images/insurance/vzp.png"}
+
+              %li.dovera.second
+                %a{"data-toggle" => "pill", :href => "#dovera"}
+                  %img{:src => "/images/insurance/dovera.png"}
+
+              %li.union.second
+                %a{"data-toggle" => "pill", :href => "#union"}
+                  %img{:src => "/images/insurance/union.png"}
+            %hr.blue
+            .tab-content.insurance
+              #vzp.tab-pane.fade.in.active
+                = haml :"modals/partials/insurance"
+              #dovera.tab-pane.fade
+                = haml :"modals/partials/insurance-dovera"
+              #union.tab-pane.fade
+                = haml :"modals/partials/insurance-union"
+
+          #drugs.tab-pane.fade
+            = haml :"modals/partials/drugs"
+
+
+
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť
+

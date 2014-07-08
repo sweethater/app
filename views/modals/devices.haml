@@ -1,0 +1,80 @@
+#devicesModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Zdravotnícke pomôcky
+      .modal-body
+        .devices
+
+          #accordion-devices.panel-group
+            .panel.panel-default
+              .panel-heading
+                %center
+                  %h4.panel-title
+                    %a.accordion-toggle{ :"data-toggle"=>"collapse", :"data-parent"=>"#accordion-devices", :href=>"#collapseOne"}
+                      .primary Ortopedická obuv
+                      .secondary Ortopedické topánky a vložky
+
+              #collapseOne.panel-collapse.collapse
+                = haml :"modals/device-partials/shoes"
+
+            .panel.panel-default
+              .panel-heading
+                %center
+                  %h4.panel-title
+                    %a.accordion-toggle{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion-devices", :href=>"#collapseTwo"}
+                      .primary Ortézy krčnej chrbtice 
+                      .secondary Bandážneho typu a nebandážneho typu
+              #collapseTwo.panel-collapse.collapse
+                = haml :"modals/device-partials/back"
+
+
+            .panel.panel-default
+              .panel-heading
+                %center
+                  %h4.panel-title
+                    %a.accordion-toggle{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion-devices", :href=>"#collapseThree"}
+                      .primary Ortézy trupu
+                      .secondary Bandážneho typu a nebandážneho typu
+              #collapseThree.panel-collapse.collapse
+                = haml :"modals/device-partials/torso"
+
+
+            .panel.panel-default
+              .panel-heading
+                %center
+                  %h4.panel-title
+                    %a.accordion-toggle{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion-devices", :href=>"#collapseFour"}
+                      .primary Ortézy dolných končatín
+                      .secondary Bandážneho typu a nebandážneho typu - fixačné, redresné, na chodenie
+              #collapseFour.panel-collapse.collapse
+                = haml :"modals/device-partials/legs"
+
+
+            .panel.panel-default
+              .panel-heading
+                %center
+                  %h4.panel-title
+                    %a.accordion-toggle{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion-devices", :href=>"#collapseFive"}
+                      .primary Ortézy horných končatín
+                      .secondary Bandážneho typu a nebandážneho typu - fixačné, redresné a dynamické
+              #collapseFive.panel-collapse.collapse
+                = haml :"modals/device-partials/hands"
+
+
+            .panel.panel-default
+              .panel-heading
+                %center
+                  %h4.panel-title
+                    %a.accordion-toggle{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion-devices", :href=>"#collapseSix"}
+                      .primary Protézy
+                      .secondary dolných končatín a horných končatín
+              #collapseSix.panel-collapse.collapse
+                = haml :"modals/device-partials/prosthesis"
+
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

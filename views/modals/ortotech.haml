@@ -1,0 +1,150 @@
+#ortotechModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Ortotech
+      .modal-body
+        %ul.nav.nav-pills.ortotech
+          %li.about.active
+            %a{"data-toggle" => "pill", :href => "#about"} O nás
+          %li.videos
+            %a{"data-toggle" => "pill", :href => "#videos"} Videa
+          %li.contacts
+            %a{"data-toggle" => "pill", :href => "#contacts"} Kontakty
+
+        %hr.blue
+
+        .tab-content
+          #about.tab-pane.fade.in.active
+            %center
+              %h2 O nás
+            %hr.blue
+            .container.about
+              .row
+                .col-md-10.col-md-offset-1
+                  %p Vitajte v spoločnosti Ortotech, s.r.o., Banská Bystrica. Poskytujeme komplexné služby v oblasti ortopédie, protetiky, rehabilitácie, predaj seriových zdravotníckych pomôcok a výroba individuálnych ortopedicko-protetických zdravotníckych pomôcok (katalóg produktov tu). Naša spoločnosť vznikla v roku 1994 a začínali sme výrobou protéz dolných a horných končatín, v menšej miere ortéz trupu. Ortotech v priebehu rokov rozšíril rady zamestnancov a v súčasnej dobe vyrábame kompletný sortiment zdravotníckych pomôcok priamo na mieru pacientovi. Naše služby sme rozšírili aj o ambulantnú starostlivosť v oblasti ortopédie a ortopedickej protetiky, ako aj rehabilitáciu.
+                  %center
+                    %img{:src=>"images/firma1.png"}
+                  %p Uvedomujeme si, aká je dôležitá spokojnosť nášho zákazníka a preto v snahe zabezpečiť čo najvyššiu kvalitu výroby, sme v našej spoločnosti zaviedli systém manažérstva kvality ISO 9001:2000, a to nielen vo výrobnej časti firmy, ale aj v ambulantnej, čím chceme zabezpečiť Vašu maximálnu spokojnosť. Vo viacerých mestách na Slovensku máme zriadené merné miesta (nájdete na spodku stránky), kde naši pracovníci odoberajú miery, aby sme sprístupnili naše služby a skrátili termíny vyhotovenia pomôcok.
+                  %center
+                    %img{:src=>"images/firma2.png"}
+                  %p V súčasnej dobe naša spoločnosť už sídli vo svojich vlastných priestoroch, kde Vám po celkovej rekonštrukcii budovy, budú poskytované komplexné služby v nadštandardnej starostlivosti. Tešíme sa za Vašu návštevu a veríme, že budete od nás odchádzať spokojný.
+
+          #videos.tab-pane.fade
+            %center
+              %h2 Prezentačné video spoločnosti Ortotech
+            %hr.blue
+            / %video#presentation-vid.video-js.vjs-default-skin.vjs-big-play-centered{:"data-setup"=>'{"example_option":true}',:preload=>"auto", :width=>640, :height=>480, :controls=>"",:poster=>"images/presentation.png"}
+            /   %source{:src => "/images/presentation.webm", :type => "video/webm"}/
+            %video#presentation-vid{:preload=>"auto", :width=>640, :height=>480, :controls=>"",:poster=>"images/presentation.png"}
+              %source{:src => "/images/presentation.webm", :type => "video/webm"}
+
+          #contacts.tab-pane.fade
+            %center
+              %h2 Organizačný prehľad pracovísk
+              %h2 ORTOTECH / ORTOREHA
+            %hr.blue
+            .container.contacts
+              .row
+                .col-md-10.col-md-offset-1
+                  .section
+                    .name.big Recepcia
+                    .phone 048/4729 711
+                  %hr.blue
+
+                  .section
+                    .name.big Ortopedické ambulancie
+                    %ul.list
+                      %li
+                        .name MUDr. Čunderlíková
+                        .phone 048/4729 705
+                      %li
+                        .name MUDr. Hudec
+                        .phone 048/4729 706
+                      %li
+                        .name MUDr. Konderová
+                        .phone 048/4729 709
+                      %li
+                        .name MUDr. Kubišová
+                        .phone 048/4729 716
+                  %hr.blue
+
+                  .section
+                    .name.big Rehabilitačná ambulancia
+                    %ul.list
+                      %li
+                        .name RHB + masér
+                        .phone 048/4729 715
+                  %hr.blue
+
+                  .section
+                    .name.big Výroba ortopedických pomôcok
+                    %ul.list
+                      %li
+                        .name Bandáže – p. Sekeréšová
+                        .phone 048/4729 702
+                      %li
+                        .name Protézy – p. Šebo, p. Virág
+                        .phone 048/4729 704
+                      %li
+                        .name Technici - korzety / ortézy – p. Medveď
+                        .phone 048/4729 703
+                      %li
+                        .name Technici – sádrovňa
+                        .phone 048/4729 707
+                      %li
+                        .name Obuv, vložky – p. Holubčíková, p. Konder M.
+                        .phone 048/4729 712
+                      %li
+                        .name Vložky – p. Konder V.
+                        .phone 048/4729 713
+                  %hr.blue
+
+                  .section
+                    .name.big Materiálno technické zabezpečenie
+                    %ul.list
+                      %li
+                        .name Ing. Šuchma
+                        .phone 048/4729 711
+                      %li.no-dot
+                        .phone 048/4729 711
+                    %br
+                  %hr.blue
+
+                  .section
+                    .name.big Sekretariát spoločnosti
+                    %ul.list
+                      %li
+                        .name Bc. Bednárová
+                        .phone 048/4729 700
+                      %li
+                        .name Ing. Kindernayová
+                        .phone 048/4729 777
+                      %li
+                        .name p. Pôbišová
+                        .phone 048/4729 717
+
+            %hr.blue
+            .row
+              .col-md-6
+                %center.main-contacts
+                  %h2.main Kontakt
+                  %h3.phone Tel: 048/4729 711
+                  %h3.fax Fax: 048/4729 797
+                  %h3.mail Mail: ortotech@ortotech.sk
+
+              .col-md-6
+                %center.main-adress
+                  %h2.main Adresa
+                  %h3.name Ortotech, spol. s.r.o.
+                  %h3.street Nám. L. Svobodu č.1
+                  %h3.city 975 17 Banská Bystrica
+
+
+
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

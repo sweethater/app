@@ -1,0 +1,137 @@
+#trafficModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Dopravné informácie
+      .modal-body
+
+
+
+        %ul.nav.nav-pills.traffic-info
+          %li.first.active
+            %a{"data-toggle" => "pill", :href => "#bus"} Autobusy
+          %li.second
+            %a{"data-toggle" => "pill", :href => "#taxi"} Taxiky
+
+        %hr.blue
+
+        .tab-content
+
+          #bus.tab-pane.fade.in.active
+            .bus-list-header
+              Linky
+            .bus-list
+
+              .tabbable.tabs-left
+                %ul.nav.nav-tabs.nav-global
+                  %li.active
+                    %a{"data-toggle" => "tab", :href => "#bus1"} 1
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#bus3"} 3
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#bus5"} 5
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#bus25"} 25
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#bus80"} 80
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#busZv"} Zvolen
+
+                .tab-content
+
+                  = haml :"modals/traffic/1"
+
+                  = haml :"modals/traffic/3"
+
+                  = haml :"modals/traffic/5"
+
+                  = haml :"modals/traffic/25"
+
+                  = haml :"modals/traffic/80"
+
+                  = haml :"modals/traffic/zv"
+
+
+          #taxi.tab-pane.fade
+            .container
+              .row
+                .col-md-6
+                  .column1
+                    / .service-name
+                    /   One Taxi
+                    / .phone
+                    /   0905 44 25 44
+                    /   %br
+                    /   0911 44 52 44
+                    /   %br
+                    /   0948 49 69 69
+
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b One Taxi
+                      %ul.number-list
+                        %li
+                          0905 44 25 44
+                        %li
+                          0911 44 52 44
+                        %li
+                          0948 49 69 69
+                      %br
+
+                .col-md-6
+                  .column2
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b Fun Taxi
+                      %ul.number-list
+                        %li
+                          0908 888 877
+                        %li
+                          0903 035 505
+                        %li
+                          0949 510 530
+                      %br
+                      %br
+                    / .service-name
+                    /   Fun Taxi
+                    / .phone
+                    /   0908 888 877
+                    /   %br
+                    /   0903 035 505
+
+              .row
+                .col-md-6
+                  .column1
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b Expres Taxi
+                      %ul.number-list
+                        %li
+                          0902 41 00 41
+                        %li
+                          0911 61 61 61
+                        %li
+                          0948 11 44 77
+                      %br
+
+                .col-md-6
+                  .column2
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b Synby Taxi
+                      %ul.number-list
+                        %li
+                          0905 144 808
+                        %li
+                          0903 188 565
+                      %br
+                      %br
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť
+
