@@ -23,11 +23,20 @@
 					li {
 						a {
 							font-size: 22px;
+							font-weight: bolder;
 						}
 					}
 				}
 			}
 	}
+}
+
+.modal-title {
+	font-weight: bolder;
+}
+
+.nav-pills a {
+	font-weight: bolder;
 }
 
 #a,
@@ -64,6 +73,9 @@
 					}
 				}
 			}
+		}
+		.additional h3 {
+			font-weight: bolder;
 		}
 	}
 }
@@ -153,16 +165,17 @@
 									border-right: 1px solid;
 									height: 385px;
 									.office-info {
+										font-weight: bolder;
 										padding: 0px 20px;
 										font-size: 18px;
 										.city {
-											font-weight: bolder;
 										}
 										.street {
 
 										}
 										.opening {
 											font-size: 19px;
+
 											.day > * {
 												display: inline-block;
 											}
@@ -225,6 +238,7 @@
 			}
 		}
 		#drugs .drugs {
+			font-weight: bolder;
 			li a {
 				font-size:21px;
 				padding-left: 35px !important;
@@ -248,6 +262,9 @@
 			}
 		}
 	}
+	.panel-collapse .inner-text {
+		font-weight: bolder;
+	}
 }
 
 #trafficModal {
@@ -261,11 +278,12 @@
 	#bus {
 		.bus-list-header {
 			color: #10b7d2;
-			font-size: 17px;
+			font-size: 30px;
+			padding-left: 5px;
 		}
 		ul {
 			li a {
-				padding: 10px 15px;
+				padding: 20px 15px;
 			}
 		}
 	}
@@ -307,7 +325,7 @@
 
 		.bus-table {
 			color: #10b7d2;
-			width: 340px;
+			width: 380px;
 			display: inline-block;
 			th {
 				font-size: 20px;
@@ -320,7 +338,7 @@
 					width: 85px;
 				}
 				&.minute {
-					width: 220px
+					width: 280px
 				}
 			}
 			td {
@@ -333,7 +351,7 @@
 			}
 		}
 		.week {
-			margin-left: 50px;
+			margin-left: 0px;
 		}
 	}
 
@@ -367,6 +385,43 @@
 
 #devicesModal {
 	.devices {
+
+		.group-list-header {
+			color: #10b7d2;
+			font-size: 30px;
+			padding-left: 5px;
+		}
+
+		.nav.nav-tabs.nav-global {
+			width: 115px;
+		}
+
+		.tab-content {
+			.body {
+				min-height: 800px;
+				.text {
+					padding-top: 5px;
+					padding-left: 150px;
+					padding-right: 40px;
+					.list {
+						font-size: 20px;
+						font-weight: bolder;
+
+					}
+					images {
+						top: 50px;
+						left: 100px;
+						position: relative;
+						.img-thumbnail {
+							margin-right: 40px;
+							margin-bottom: 40px;
+
+						}
+					}
+				}
+			}
+		}
+
 		h4.panel-title {
 			color: #10b7d2;
 			.primary {
@@ -501,11 +556,13 @@
 	}
 	.departure-table {
 		font-size:20px;
+		font-weight: bold;
 		width: 800px;
 		margin-left: 70px;
 		margin-top: 70px;
 		.city {
 			font-weight: bolder;
+			font-size: 24px;
 		}
 	}
 	.departure-info {
@@ -536,4 +593,21 @@
 
 		}
 	}
+	.map-contact {
+
+		.map {
+			position: absolute;
+			padding-top: 45px;
+			right: 25px;
+			margin-bottom: 40px;
+		}
+	}
+
+	#rehab.tab-pane .nav-global {
+		margin-bottom: 30px;
+	}
+	.info .text {
+		font-weight: bold;
+	}
 }
+

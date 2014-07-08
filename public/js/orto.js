@@ -51,6 +51,31 @@ $(document).ready(function() {
 		}
 	});
 
+  $('form#survey input').keyup(function() {
+
+      var emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+      var email = $('form#survey input#mail').val();
+      var valid_email = emailReg.test(email);
+
+      var usernameReg = new RegExp(/^[a-zA-Z]+[\s]+[a-zA-Z]+/i);
+      var username = $('form#survey input#user-name').val();
+      var valid_username = usernameReg.test(username);
+
+      if ( valid_email && valid_username ) {
+      	$('button#submit').removeAttr('disabled');
+
+      } else {
+        $('button#submit').attr('disabled', 'disabled');
+      }
+  });
+
+	$('#surveyModal.modal .btn-close').on('click',function(){
+		clearForm();
+	});
+	$('#surveyModal.modal button.close').on('click',function(){
+		clearForm();
+	});
+
 	$('ul.insurance li').on('click', function(){
 		var insurance_tab = $(this).find('a').attr('href');
 		goToDefault(insurance_tab);
@@ -63,9 +88,13 @@ $(document).ready(function() {
 		pause_video(player);
 	});
 
-	$('#ortotechModal .close, #ortotechModal .btn-close').on('click',function(){
+	$('#ortotechModal').on('hidden.bs.modal',function(){
 		stop_video(player);
 	});
+
+	// $('#ortotechModal .close, #ortotechModal .btn-close').on('click',function(){
+	// 	stop_video(player);
+	// });
 
 	$("#bgvid").bind("ended", function() {
 		bgPlaying = false;
@@ -90,14 +119,43 @@ $(document).ready(function() {
 
 	$('.body-part').on('click',function(){
 		var modal_name = $(this).attr("modal_src");
-		console.log(modal_name);
 		$('#partModal-' + modal_name).modal('show');
 		showBodyModal();
 	});
 
-	$('#partModal').on('hidden.bs.modal',function(){
+
+	$('#partModal-clenok').on('hidden.bs.modal',function(){
 		hideBodyModal();
 	});
+
+	$('#partModal-koleno').on('hidden.bs.modal',function(){
+		hideBodyModal();
+	});
+
+	$('#partModal-panva').on('hidden.bs.modal',function(){
+		hideBodyModal();
+	});
+
+	$('#partModal-zapastie').on('hidden.bs.modal',function(){
+		hideBodyModal();
+	});
+
+	$('#partModal-laket').on('hidden.bs.modal',function(){
+		hideBodyModal();
+	});
+
+	$('#partModal-rameno').on('hidden.bs.modal',function(){
+		hideBodyModal();
+	});
+
+	$('#partModal-chrbat').on('hidden.bs.modal',function(){
+		hideBodyModal();
+	});
+
+	$('#partModal-krk').on('hidden.bs.modal',function(){
+		hideBodyModal();
+	});
+
 
   $('*').bind('mousemove keydown scroll click', function () {
 
@@ -128,6 +186,12 @@ $(document).ready(function() {
    });
 
 })
+
+function clearForm(){
+	$('input#user-name').val('');
+	$('input#mail').val('');
+	$('textarea#feedback').val('');
+}
 
 function goToDefault(element){
 	$(element).find('.activ').removeClass('activ');

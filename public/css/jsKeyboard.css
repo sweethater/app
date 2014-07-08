@@ -10,7 +10,15 @@ overflow:hidden;
 #keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 
 #keyboardHeader {position:relative;}
-#keyboardHeader div {color:#fff; background-color:#7b8490;padding:8px; position:absolute; cursor:pointer; right:-10px; top:-50px; border-radius:10px;}
+#keyboardHeader div {color:#fff; background-color:#7b8490;padding-top: 14px;
+padding-left: 15px;
+padding-bottom: 10px;
+padding-right: 15px;
+position: absolute;
+cursor: pointer;
+right: -60px;
+top: -10px;
+border-radius: 14px;}
 .closex {font-weight:bolder; color:#000;}
 
 #keyboardCapitalLetter {display:block;}
