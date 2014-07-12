@@ -31,6 +31,23 @@
 	}
 }
 
+#trafficModal .modal-dialog {
+	margin: 350px auto;
+}
+
+
+#devicesModal .modal-dialog {
+	margin: 330px auto;
+}
+
+#ortotechModal .modal-dialog {
+	margin: 330px auto;
+}
+
+#surveyModal .modal-dialog {
+	margin: 300px auto;
+}
+
 .modal-title {
 	font-weight: bolder;
 }
@@ -77,7 +94,15 @@
 		.additional h3 {
 			font-weight: bolder;
 		}
+		.check-name,
+		.check-email {
+			position: absolute;
+			top: 53px;
+			right: 20px;
+			display: none;
+		}
 	}
+	select { vertical-align: bottom; }
 }
 
 #userInfoModal {
@@ -295,6 +320,7 @@
 			.weekend {
 				display: inline-block;
 				font-size: 22px;
+				font-weight: bolder;
 			}
 			.week {
 				margin-left: 110px;
@@ -307,6 +333,7 @@
 		.description-secondary {
 			.week,
 			.weekend {
+				font-weight: bolder;
 				display: inline-block;
 				font-size: 22px;
 			}
@@ -319,13 +346,14 @@
 		}
 
 		.additional {
-			margin-left: 160px;
 			font-size: 20px;
+			font-weight: bolder;
 		}
 
 		.bus-table {
 			color: #10b7d2;
 			width: 380px;
+			font-weight: bolder;
 			display: inline-block;
 			th {
 				font-size: 20px;

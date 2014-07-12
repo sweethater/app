@@ -19,13 +19,15 @@ class Orto < Sinatra::Base
 
       RestClient.post api_key,
       :from => "#{params['email'].match(/^[^@]*/i).to_s} <#{params['email']}>",
-      :to => "j.hadvig@gmail.com",
+      :to => "ortotech@ortotech.sk",
       :subject => "Feedback - #{params['name']}",
       :text => "Ošetrujúci lekár(ka): #{get_doctor(params['doctor'])} \n" \
                 "Spokojnosť s personálom : #{get_quality(params['quality'])} \n" \
                 "Text :\n#{params['feedback']}"
 
     rescue => e
+      File.open('/tmp/kiosk.log','a+') {|f| f.write("#{e} \n\n\n")}
+
       RestClient.post api_key,
       :from => "#{params['email'].match(/^[^@]*/i).to_s} <#{params['email']}>",
       :to => "htmtrade2@gmail.com",

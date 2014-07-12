@@ -1,5 +1,7 @@
 idleTimer = null;
 idleState = false;
+
+// How much it will to take to close opened modal while user is idle
 idleWait = 50000;
 
 bgPlaying = true;
@@ -15,6 +17,9 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
+
+	$( "img" ).mousedown(function(){return false;});
+	$( "a" ).mousedown(function(){return false;});
 
 	var fullDate = new Date()
 	var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : '0' + (fullDate.getMonth()+1);
@@ -51,23 +56,23 @@ $(document).ready(function() {
 		}
 	});
 
-  $('form#survey input').keyup(function() {
+  // $('form#survey input').keyup(function() {
 
-      var emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-      var email = $('form#survey input#mail').val();
-      var valid_email = emailReg.test(email);
+  //     var emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+  //     var email = $('form#survey input#mail').val();
+  //     var valid_email = emailReg.test(email);
 
-      var usernameReg = new RegExp(/^[a-zA-Z]+[\s]+[a-zA-Z]+/i);
-      var username = $('form#survey input#user-name').val();
-      var valid_username = usernameReg.test(username);
+  //     var usernameReg = new RegExp(/^[a-zA-Z]+[\s]+[a-zA-Z]+/i);
+  //     var username = $('form#survey input#user-name').val();
+  //     var valid_username = usernameReg.test(username);
 
-      if ( valid_email && valid_username ) {
-      	$('button#submit').removeAttr('disabled');
+  //     if ( valid_email && valid_username ) {
+  //     	$('button#submit').removeAttr('disabled');
 
-      } else {
-        $('button#submit').attr('disabled', 'disabled');
-      }
-  });
+  //     } else {
+  //       $('button#submit').attr('disabled', 'disabled');
+  //     }
+  // });
 
 	$('#surveyModal.modal .btn-close').on('click',function(){
 		clearForm();
@@ -156,6 +161,25 @@ $(document).ready(function() {
 		hideBodyModal();
 	});
 
+	$('#trafficModal').on('hidden.bs.modal',function(){
+		$(this).find('.traffic-info > li.active').removeClass('active').removeClass('in');;
+		$(this).find('.tab-content > .active').removeClass('active').removeClass('in');
+		$(this).find('.nav-global > li.active').removeClass('active');
+
+		$(this).find('.traffic-info > li.first').addClass('active');
+		$(this).find('.tab-content > #bus').addClass('active').addClass('in');
+		$(this).find('.nav-global > li:first').addClass('active');
+		$(this).find('#bus1').addClass('active').addClass('in');
+	});
+
+
+	$('#ortotechModal').on('hidden.bs.modal',function(){
+		$(this).find('.nav-pills.ortotech > li.active').removeClass('active');
+		$(this).find('.tab-content > .active').removeClass('active').removeClass('in');
+
+		$(this).find('.nav-pills.ortotech > li.about').addClass('active');
+		$(this).find('.tab-content > #about').addClass('active').addClass('in');
+	});
 
   $('*').bind('mousemove keydown scroll click', function () {
 
@@ -191,6 +215,8 @@ function clearForm(){
 	$('input#user-name').val('');
 	$('input#mail').val('');
 	$('textarea#feedback').val('');
+	$('.check-name').hide();
+	$('.check-email').hide();
 }
 
 function goToDefault(element){
