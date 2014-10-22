@@ -22,7 +22,14 @@ $(document).ready(function() {
 	$( "a" ).mousedown(function(){return false;});
 
 	var fullDate = new Date()
-	var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : '0' + (fullDate.getMonth()+1);
+	var twoDigitMonth = 0
+
+	if ( (fullDate.getMonth()+1) > 9 ) {
+		twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : (fullDate.getMonth()+1);
+	} else {
+		twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : '0' + (fullDate.getMonth()+1);
+	}
+
 	var currentDate = fullDate.getDate() + "." + twoDigitMonth + ".";
 	$('#calendar').text(currentDate)
 
