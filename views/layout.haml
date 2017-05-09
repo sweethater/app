@@ -60,11 +60,13 @@
 
 
       #footer_navigation
-        .first-line
+        .zero-line.footer-line
           %button.btn.btn-nav.btn-lg{:type => "button", "data-target" => "#ortotechModal", "data-toggle" => "modal"} Ortotech
+        .first-line.footer-line
+          %button.btn.btn-nav.btn-lg{:type => "button", "data-target" => "#additivesModal", "data-toggle" => "modal"} Doplnky výživy
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#rehabModal", "data-toggle" => "modal"} Rehabilitácie
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#devicesModal", "data-toggle" => "modal"} Zdravotnícke pomôcky
-        .second-line
+        .second-line.footer-line
           %button.btn.btn-nav.btn-lg{:type => "button", "data-target" => "#trafficModal", "data-toggle" => "modal"} Dopravné informácie
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#userInfoModal", "data-toggle" => "modal"} Informácie pre klientov
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#surveyModal", "data-toggle" => "modal"} Anketa pre pacientov
@@ -86,6 +88,7 @@
       = haml :"modals/traffic"
       = haml :"modals/devices"
       = haml :"modals/ortotech"
+      = haml :"modals/additives"
 
 
     #virtualKeyboard

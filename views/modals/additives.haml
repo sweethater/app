@@ -1,0 +1,78 @@
+#additivesModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Doplnky výživy
+      .modal-body
+        %ul.nav.nav-pills.additives
+          %li.caskon.active
+            %a{"data-toggle" => "pill", :href => "#caskon"} Lipo C-Askon
+          %li.cinjektopas
+            %a{"data-toggle" => "pill", :href => "#cinjektopas"} Vitamin C-Injektopas
+
+        %hr.blue
+
+        .tab-content
+          #caskon.tab-pane.fade.in.active
+            .about
+              %img.right{:src=>"images/caskon.png"}
+              %p.bold
+                Výživový doplnok s lipozomálnym vitamínom C, s výťažkom zo šípok a bioflavonoidmi z citrusových plodov.
+              %p.main
+                Organizmus je schopný vstrebávať vitamín C len v obmedzenej miere, a tak sa prebytočné množstvo, ktoré sa po požití nedokáže vstrebať,  v priebehu niekoľkých hodín vylúči. Čím väčšiu jednorazovú dávku vitamínu C organizmus dostane, tým menšie množstvo z nej dokáže využiť. Pri požití 1000 mg klasického vitamínu C sa až 80 % tohto množstva vylúči, bez toho by bol organizmus schopný ho zužitkovať.
+              %p.main
+                V prípravku LIPO-C-ASKOR je vitamín C vďaka lipozomálnej technológii obklopený vrstvou prírodných fosfolipidov (tukov), z ktorých sú utvorené aj naše bunkové steny. V priebehu trávenia táto fosfolipidová vrstva poskytuje vitamínu C ochranný kryt a okrem predĺženého vstrebávania umožňuje tiež ľahšie prenikanie vitamínu C do buniek. Vitamín C obsiahnutý v prípravku LIPO-C-ASKOR sa tak výborne zužitkuje a dokáže zaistiť vysokú hladinu vitamínu C v organizme po dlhšiu dobu. Vďaka tomuto účinnému vstrebávaniu je zároveň šetrný k tráviacemu traktu.
+              %p.bold
+                LIPO-C-ASKOR obsahuje lipozomálny vitamín C, ktorý je potrebný v ľudskom organizme k činnostiam ako:
+              %ul
+                %li
+                  normálna funkcia imunitného systému
+                %li
+                  ochrana buniek proti oxidačnému stresu (antioxidant)
+                %li
+                  zníženie miery únavy a vyčerpania
+                %li
+                  normálne fungovanie nervového systému
+                %li
+                  udržiavanie normálnych psychických funkcií
+                %li
+                  normálne procesy energetického metabolizmu
+                %li
+                  normálna tvorba kolagénu (dôležitý pre hojenie a pevnosť tkanív ako sú cievy, chrupavky, kosti, koža, vlasy)
+
+              %p.bold
+                Odporúčané dávkovanie:
+              %ul
+                %li
+                  Dospelí: 1-4 kapsuly denne (1-2 kapsuly ráno a 1-2 kapsuly večer).
+                %li
+                  Deti staršie ako 6 rokov: 1-2 kapsuly denne.
+
+          #cinjektopas.tab-pane.fade
+            .about
+              %img.left{:src=>"images/infuz.png"}
+              %p.bold
+                Nadmerné zápalové reakcie sú rozhodujúce pri poruchách hojenia rán.
+              %p.main
+                Jedna z najdôležitejších príčin pre nadmernú pooperačnú zápalovú reakciu je zníženie hladiný antioxidačných kapacít, hlavne hladiny vitamínu C. Vitamín C účinne bojuje s oxidatívnym stresom, pôsobí protizápalovo, zlepšuje prekrvenie a je nevyhnutnou súčasťou tvorby kolagénu, hojenia rán a imunitnej obranyschopnosti. Experimentálne štúdie dokazujú, že parenterálnym podávaním(infúziou) vitamín C urýchluje hojenie rán a zlomenín.
+              %p.main
+                Už pred chirurgickým zákrokom môže byť prítomný nedostatok vitamínu C pri zápalových ochoreniach a tiež pri nevyváženej strave, s narastajúcim vekom. Nedostatok vitamínu C po chirurgickom zákroku vzniká tvorbou reaktívnych kyslíkových zlúčenín počas ischémie a reperfúzie - oxidatívny stres. 
+              %p.bold Nedostatok vitamínu C a oxidatívny stres sú zodpovedné za mnoho komplikácií:
+              %ul
+                %li
+                  Poruchy hojenia rán
+                %li
+                  Opuchy
+                %li
+                  Infekcie
+                %li
+                  Bolesti
+              %img.right{:src=>"images/stress.png"}
+              %p.main
+                Infúziou naše telo príjme oveľa viac vitamínu C. Stravou a tabletami sa takéto vysoké hladiny v krvi nedajú dosiahnut. Vitamín C sa vstrebáva v tenkom čreve pomocou špeciálnych transportných molekúl, a tak sa dostáva do krvi. Počet týchto transportérou je však obmedzený, takže do krvi sa dostane len časť vitamínu C.
+              %p.bold
+                V Nemecku je Vitamin C- Injektopas 7.5g jediným schvaleným injekčným roztokom na terapiu vysoko dávkovaným vitamínom C.
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

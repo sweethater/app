@@ -119,11 +119,15 @@
 #footer_navigation {
   position: fixed;
   bottom: 0;
+  .footer-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .zero-line {
+  }
   .first-line {
   }
   .second-line {
-  	margin-top: 30px;
-  	margin-bottom: 20px;
   }
 }
 

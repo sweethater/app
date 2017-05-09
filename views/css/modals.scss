@@ -3,7 +3,8 @@
 #userInfoModal,
 #trafficModal,
 #devicesModal,
-#ortotechModal {
+#ortotechModal,
+#additivesModal {
 	overflow-y:hidden;
 	font-family: rw-r;
 	.modal-content {
@@ -575,8 +576,39 @@
 	}
 }
 
+#additivesModal {
+	.nav-pills.additives {
+		font-size: 22px;
+		li {
+			width: 47%;
+			a {
+			    text-align: center;
+			}
+		}
+	}
+	.about {
+		margin-top:40px;
+		font-size: 20px;
+		img {
+			float: left;
+			padding-right: 20px;
+		    padding-bottom: 20px;
+		}
+		.bold {
+			font-size: 22px;
+			font-weight: bold;
+		}
+		.main {
+
+		}
+	}
+	#cinjektopas {
+		padding-bottom: 150px;
+	}
+}
+
 #rehabModal {
-	.depart-rehab{
+	.depart-rehab {
 		font-size: 22px;
 		li a {
 			padding: 20px 150px;
