@@ -58,10 +58,9 @@
   margin: auto;
   position: absolute;
   right: 0;
-  padding-top: 5px;
+  padding-top: 25px;
   font-family: rw-r;
   text-align: center;
-  color: white;
   font-size: 40px;
   color: #10b7d2;
   font-weight: bolder;
@@ -71,7 +70,7 @@
   margin: auto;
   position: absolute;
   right: 130px;
-  padding-top: 5px;
+  padding-top: 20px;
 }
 
 #calendar {
@@ -79,11 +78,10 @@
   width: 150px;
   margin: auto;
   position: absolute;
-  right: 0;
-  padding-top: 80px;
+  left: 70px;
+  padding-top: 25px;
   font-family: rw-r;
   text-align: center;
-  color: white;
   font-size: 40px;
   color: #10b7d2;
   margin-right: -5px;
@@ -93,8 +91,18 @@
 #calendar-icon img {
   margin: auto;
   position: absolute;
-  right: 130px;
-  padding-top: 80px;
+  left: 20px;
+  padding-top: 20px;
+}
+
+#nameday {
+  position: absolute;
+  font-family: rw-r;
+  font-weight: bolder;
+  font-size: 40px;
+  color: #10b7d2;
+  left: 25px;
+  padding-top: 90px;
 }
 
 

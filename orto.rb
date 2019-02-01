@@ -9,7 +9,19 @@ class Orto < Sinatra::Base
   end
 
   get '/' do
-    haml :index
+    begin
+      resp = RestClient.get("https://api.abalin.net/get/today?country=sk", headers={})
+    rescue
+      resp_obj = ""
+    else
+      resp_obj = resp
+    end
+    begin
+      name = JSON.parse(resp)["data"]["name_sk"]
+    rescue
+      name = ""
+    end
+    haml :index, :locals => {:name => name}
   end
 
   post '/submit_feedback' do
@@ -41,13 +53,17 @@ class Orto < Sinatra::Base
   def get_doctor(index)
     case index
     when "1"
-      "MUDr. Čunderlíková"
+      "MUDr. Sopko Marek"
     when "2"
-      "MUDr. Hudec"
+      "MUDr. Baláž Marián"
     when "3"
-      "MUDr. Konderová"
+      "MUDr. Uhrinová Adriana"
     when "4"
-      "MUDr. Kubišová"
+      "MUDr. Hudec Andrej"
+    when "5"
+      "MUDr. Konderová Stela"
+    when "6"
+      "MUDr. Lizáková Dagmar"
     end
   end
 
